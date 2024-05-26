@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Triagem</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="form-container">
+                    <h2 class="text-center">Formulário de Triagem</h2>
+                </div>
+                <div class="card-body">
+                    <div id="alerta-sucesso" class="alert alert-success d-none" role="alert">
+                        Formulário enviado com êxito! Entraremos em contato por meio do email ou número telefônico informado no campo.
+                    </div>
+                    <div id="alerta-erro" class="alert alert-danger d-none" role="alert">
+                        Ocorreu um erro ao enviar o formulário. Tente novamente.
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nome">Nome: <span class="badge badge-secondary"></span></label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome:" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idade">Idade: <span class="badge badge-secondary"></span></label>
+                        <input type="number" class="form-control" id="idade" placeholder="Digite sua idade:" required>
+                    </div>
+                    <div class="form-group-idade">
+                        <label for="idade">CPF ou RG (Registro Geral): <br><span
+                                class="badge badge-secondary"></span></label>
+                        <input type="number" class="form-control" id="idade" placeholder="Digite seu CPF ou RG:"
+                            required>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email ou Número Telefônico: </label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Digite seu email ou número telefônico para contato:">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputAddress" class="form-label">Endereço: </label>
+                        <input type="email" class="form-control" id="inputAddress" aria-describedby="emailHelp"
+                            placeholder="Digite seu endereço:">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+
+
+
+                    <form id="form-triagem">
+                        <div class="form-group">
+                            <label for="estado">Estado: <span class="badge badge-secondary"></span></label>
+                            <select class="form-control" id="estado" required>
+                                <option value="">Selecione...</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-idade">
+                            <label for="idade">CEP:<span class="badge badge-secondary"></span></label>
+                            <input type="number" class="form-control" id="idade" placeholder="Digite seu CEP:" required>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label for="sexo">Sexo: <span class="badge badge-secondary"></span></label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sexo" id="masculino"
+                                    value="masculino" required>
+                                <label class="form-check-label" for="masculino">Masculino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino"
+                                    required>
+                                <label class="form-check-label" for="feminino">Feminino</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="historico-medico">Histórico Médico: <span
+                                    class="badge badge-secondary"></span></label>
+                            <textarea class="form-control" id="historico-medico" rows="3"
+                                placeholder="Descreva seu histórico médico (doenças crônicas, alergias, etc.)"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="medicamentos">Medicamentos: </label>
+                            <textarea class="form-control" id="medicamentos" rows="2"
+                                placeholder="Liste os medicamentos que usa ou já usou:"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="cirurgias">Procedimentos Médicos Anteriores: </label>
+                            <textarea class="form-control" id="cirurgias" rows="2"
+                                placeholder="Descreva os procedimentos médicos efetuados anteriormente:"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Sintomas:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Tosse</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Dor de Garganta</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Dor de Cabeça</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Calafrios</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Vômitos</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Diarréia</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Falta de Ar</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Febre</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Dor Muscular</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Fadiga</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="febre" name="symptoms">
+                                <label class="form-check-label" for="febre">Outro</label>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="severity">Gravidade dos sintomas:</label>
+                                <select class="form-control" id="severity" name="severity" required>
+                                    <option value="">Selecione</option>
+                                    <option value="leve">Leve</option>
+                                    <option value="moderada">Moderada</option>
+                                    <option value="grave">Grave</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inicio-sintomas">Início dos Sintomas: </label>
+                                <input type="text" class="form-control" id="inicio-sintomas"
+                                    placeholder="Descreva o período de início dos sintomas:">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exposicao">Exposição Recente à contaminação: </label>
+                                <textarea class="form-control" id="exposicao" rows="2"
+                                    placeholder="Descreva qualquer exposição recente a contaminações: (Viagens, hospitais, visitas e entre outros.)"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Enviar
+                                <div id="spinner" class="spinner-border spinner-border-sm d-none" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            document.getElementById('form-triagem').addEventListener('submit', function (event) {
+                event.preventDefault();
+                document.getElementById('spinner').classList.remove('d-none');
+                setTimeout(() => {
+                    document.getElementById('spinner').classList.add('d-none');
+                    document.getElementById('alerta-sucesso').classList.remove('d-none');
+                }, 2000);
+            });
+        </script>
+</body>
+
+</html>
